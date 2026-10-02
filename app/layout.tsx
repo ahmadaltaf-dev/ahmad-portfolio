@@ -21,9 +21,9 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ahmad Altaf — Frontend Engineer",
+  title: "Ahmad Altaf — Full Stack Developer",
   description:
-    "Frontend engineer in Multan, Pakistan. React, Next.js and TypeScript on the web; Kotlin and Jetpack Compose on Android. I build the ERP a 300-person field team runs its day on.",
+    "Full stack developer in Islamabad, Pakistan. Next.js, TypeScript and PostgreSQL on the web; React Native and native Android (Kotlin) on mobile; Firebase for real-time features. I build the ERP a 300-person field team runs its day on.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

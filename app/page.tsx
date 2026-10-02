@@ -279,7 +279,9 @@ export default function Home() {
 
         .products{border-top:1px solid var(--line);align-items:flex-start;padding-top:100px;padding-bottom:100px;}
         .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:1120px;width:100%;}
-        @media (max-width:900px){ .product-grid{grid-template-columns:1fr;} }
+        .product-card.wide{grid-column:1 / -1;}
+        .product-card.wide .product-stats{grid-template-columns:repeat(3,1fr);max-width:640px;}
+        @media (max-width:900px){ .product-grid{grid-template-columns:1fr;} .product-card.wide{grid-column:auto;} }
         .product-card{position:relative;border:1px solid var(--line);border-radius:20px;padding:34px;background:linear-gradient(165deg, var(--surface) 0%, var(--surface-2) 100%);overflow:hidden;}
         .product-card::before{content:'';position:absolute;top:-45%;right:-25%;width:75%;height:75%;background:var(--gradient-signal);opacity:0.14;filter:blur(60px);border-radius:50%;pointer-events:none;}
         .product-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px;position:relative;z-index:1;flex-wrap:wrap;}
@@ -373,15 +375,16 @@ export default function Home() {
       <section className="hero">
         <div className="eyebrow mono">
           <span className="status-dot" />
-          Open to full stack roles — Multan, Pakistan
+          Open to full stack roles — Islamabad, Pakistan
         </div>
         <h1 className="headline display">
           I build and run the ERP a 300-person field team clocks into every morning.
         </h1>
         <p className="hero-sub">
-          Next.js, TypeScript and PostgreSQL on the web. Kotlin and Jetpack Compose on Android. I write the
-          schema, the API routes, and the screens that call them — then take the same logic onto a cheap phone
-          that has to work with no signal and never lose a day&apos;s work.
+          Next.js, TypeScript and PostgreSQL on the web. React Native and native Android (Kotlin, Jetpack
+          Compose) on mobile, with Firebase for real-time and online features. I write the schema, the API
+          routes, and the screens that call them — then take the same logic onto a cheap phone that has to
+          work with no signal and never lose a day&apos;s work.
         </p>
         <div className="hero-links">
           <a href="mailto:ahmad.altaf7500@gmail.com">ahmad.altaf7500@gmail.com</a>
@@ -457,6 +460,27 @@ export default function Home() {
             </div>
             <div className="product-cta-row">
               <span className="product-cta ghost">POS · Inventory · Khata · Licensing</span>
+            </div>
+          </div>
+
+          <div className="product-card wide">
+            <div className="product-top">
+              <h3 className="display">Vialio <span className="grad-text">Sort</span></h3>
+              <span className="build-badge">Pre-release</span>
+            </div>
+            <p>
+              A liquid sort-puzzle mobile game, sole-developed in React Native and Firebase (first built in
+              Kotlin/Jetpack Compose) — core pour and move-validation logic, a level generator with a solver
+              that guarantees every level is solvable, boosters, lives, a coin economy, and weekly/all-time
+              leaderboards synced on Firestore.
+            </p>
+            <div className="product-stats">
+              <div><strong className="grad-text">12+</strong><span>Blocker mechanics designed</span></div>
+              <div><strong className="grad-text">100%</strong><span>Solver-verified solvable levels</span></div>
+              <div><strong className="grad-text">2</strong><span>Leaderboards — weekly &amp; all-time</span></div>
+            </div>
+            <div className="product-cta-row">
+              <span className="product-cta ghost">Pour · Blockers · Boosters · Leaderboards</span>
             </div>
           </div>
         </div>
@@ -558,11 +582,11 @@ export default function Home() {
           </div>
           <div className="skill-col">
             <h4>Backend &amp; Database</h4>
-            <p>PostgreSQL — schema design, joins and views, aggregate reporting queries, query debugging. REST API design end to end.</p>
+            <p>PostgreSQL — schema design, joins and views, aggregate reporting queries. Firebase (Firestore, Authentication, Security Rules, Analytics, Cloud Functions, Cloud Messaging), MongoDB, SQLite.</p>
           </div>
           <div className="skill-col">
             <h4>Mobile</h4>
-            <p>Android, Kotlin, Jetpack Compose, Material 3, Retrofit, OkHttp, WorkManager, Foreground Services, Google Play Console.</p>
+            <p>React Native, Android, Kotlin, Jetpack Compose, Material 3, Retrofit, OkHttp, WorkManager, Foreground Services, Google Play Console.</p>
           </div>
           <div className="skill-col">
             <h4>Auth &amp; Security</h4>
@@ -604,13 +628,14 @@ export default function Home() {
             </div>
           </div>
           <div className="project-card">
-            <h4 className="display">Personal Portfolio Website</h4>
-            <p>Responsive, mobile-first portfolio built from reusable React components; deployed to Vercel with optimised images and a working contact form.</p>
+            <h4 className="display">Food Delivery App</h4>
+            <p>REST API backend and an Android client built with Clean Architecture — MVVM, Hilt for dependency injection, and Retrofit for networking.</p>
             <div className="job-stack">
-              <span>Next.js</span>
-              <span>React</span>
-              <span>Tailwind CSS</span>
-              <span>Vercel</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MongoDB Atlas</span>
+              <span>Kotlin</span>
+              <span>Jetpack Compose</span>
             </div>
           </div>
         </div>
